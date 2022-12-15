@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const { HashedPassword, ComparedPassword } = require("../modules/bcrypt");
-const { MakeToken } = require("../modules/jwt");
+const { MakeToken, DecodeToken } = require("../modules/jwt");
 const User = require("./../modules/models/User");
 
 const router = Router();
@@ -97,6 +97,7 @@ router.post("/login", async (req, res) => {
     }
 
     const token = await MakeToken(ExistUser);
+    // const decodeToken = await DecodeToken(ExistUser.token);
 
     res.json({
       status: "ok",

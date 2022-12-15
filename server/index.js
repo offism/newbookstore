@@ -23,3 +23,4 @@ app.listen(PORT, () => {
 // 3. server ko'taramiz expressda -> default middlewarelani o'rnatamiz (express,json,urlencoded:true,cors,helmet...)
 // 4. DB connection qilamiz
 // 5. Schema yaratamiz(User, tovar, reys, job uchun exetera...)
+// 6. router papkada routlani yozamiz
